@@ -3,219 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mehul Verma — VLSI Engineer</title>
-<meta name="description" content="Mehul Verma — VLSI Engineer specializing in hardware security, SRAM PUFs, and embedded systems.">
+<title>Mehul Verma — Automotive Engineer</title>
+<meta name="description" content="Mehul Verma — Automotive engineer focused on embedded systems, in-vehicle network security and VLSI. M.Eng. International Automotive Engineering, THI Ingolstadt.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --navy:      #10202B;
-    --navy-2:    #16303E;
-    --paper:     #ECEDE7;
-    --paper-2:   #E1E3DB;
-    --copper:    #C97A4A;
-    --signal:    #4E9E8E;
-    --ink:       #10181C;
-    --line:      #B9C2BE;
-    --line-dark: rgba(236,237,231,0.18);
-    --mono: 'IBM Plex Mono', monospace;
-    --sans: 'IBM Plex Sans', sans-serif;
-    --disp: 'Space Grotesk', sans-serif;
-  }
-
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:var(--sans);
-    line-height:1.5;
-    -webkit-font-smoothing:antialiased;
-  }
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
-  }
-
-  a{color:inherit;}
-  :focus-visible{outline:2px solid var(--copper); outline-offset:3px;}
-
-  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
-  @media (max-width:640px){ .wrap{padding:0 20px;} }
-
-  .eyebrow{
-    font-family:var(--mono);
-    font-size:12px;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--copper);
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:18px;
-  }
-  .eyebrow::before{content:""; width:16px; height:1px; background:var(--copper);}
-
-  /* ---------- NAV ---------- */
-  nav{
-    position:fixed; top:0; left:0; right:0; z-index:100;
-    background:rgba(236,237,231,0.9);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav-inner{
-    max-width:1120px; margin:0 auto; padding:16px 32px;
-    display:flex; align-items:center; justify-content:space-between;
-  }
-  .logo{
-    display:flex; align-items:center; gap:10px;
-    font-family:var(--mono); font-weight:600; font-size:14px; letter-spacing:0.04em;
-    text-decoration:none; color:var(--ink);
-  }
-  .logo svg{display:block;}
-  .nav-links{display:flex; gap:28px; list-style:none;}
-  .nav-links a{
-    font-family:var(--mono); font-size:12.5px; text-transform:uppercase; letter-spacing:0.08em;
-    text-decoration:none; color:var(--navy); opacity:0.75; transition:opacity .15s;
-  }
-  .nav-links a:hover{opacity:1;}
-  @media (max-width:720px){ .nav-links{display:none;} }
-
-  /* ---------- HERO ---------- */
-  .hero{
-    background:var(--navy);
-    color:var(--paper);
-    padding:150px 0 80px;
-    position:relative;
-    overflow:hidden;
-    border-bottom:1px solid var(--copper);
-  }
-  .hero::before{
-    content:"";
-    position:absolute; inset:0;
-    background-image:
-      linear-gradient(var(--line-dark) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line-dark) 1px, transparent 1px);
-    background-size:36px 36px;
-    opacity:0.35;
-    pointer-events:none;
-  }
-  .hero-grid{
-    position:relative; z-index:1;
-    display:grid; grid-template-columns:1.15fr 0.85fr; gap:60px; align-items:center;
-  }
-  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr; gap:48px;} }
-
-  .part-no{font-family:var(--mono); font-size:12px; color:var(--signal); letter-spacing:0.1em; margin-bottom:14px;}
-  h1.name{
-    font-family:var(--disp); font-weight:700;
-    font-size:clamp(40px,6vw,68px);
-    line-height:1.02; letter-spacing:-0.01em;
-    margin-bottom:14px;
-  }
-  .role{
-    font-family:var(--disp); font-weight:500; font-size:clamp(17px,2.2vw,22px);
-    color:var(--copper); margin-bottom:22px;
-  }
-  .dek{
-    max-width:52ch; color:rgba(236,237,231,0.82); font-size:15.5px; margin-bottom:30px;
-  }
-  .uid{
-    font-family:var(--mono); font-size:12.5px; color:rgba(236,237,231,0.55);
-    letter-spacing:0.06em; margin-bottom:30px;
-  }
-  .uid span{color:var(--signal);}
-
-  .cta-row{display:flex; flex-wrap:wrap; gap:12px;}
-  .btn{
-    font-family:var(--mono); font-size:12.5px; letter-spacing:0.05em; text-transform:uppercase;
-    padding:12px 18px; text-decoration:none; border:1px solid rgba(236,237,231,0.3);
-    color:var(--paper); transition:all .18s; display:inline-flex; align-items:center; gap:8px;
-  }
-  .btn:hover{border-color:var(--copper); color:var(--copper);}
-  .btn.solid{background:var(--copper); border-color:var(--copper); color:var(--navy); font-weight:600;}
-  .btn.solid:hover{background:var(--paper); border-color:var(--paper); color:var(--navy);}
-
-  /* PUF grid */
-  .puf-panel{
-    border:1px solid rgba(236,237,231,0.25);
-    padding:18px;
-    background:rgba(16,32,43,0.4);
-  }
-  .puf-label{
-    display:flex; justify-content:space-between; align-items:baseline;
-    font-family:var(--mono); font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase;
-    color:rgba(236,237,231,0.5); margin-bottom:12px;
-  }
-  #puf-status{color:var(--signal);}
-  .puf-grid{
-    display:grid; grid-template-columns:repeat(16,1fr); gap:3px; aspect-ratio:1/1;
-  }
-  .cell{ background:rgba(236,237,231,0.06); transition:background .12s linear; }
-  .cell.on{ background:var(--signal); box-shadow:0 0 6px rgba(78,158,142,0.6); }
-  .cell.on.locked{ background:var(--copper); box-shadow:0 0 6px rgba(201,122,74,0.55); }
-
-  /* ---------- SECTIONS ---------- */
-  section{padding:80px 0; border-bottom:1px solid var(--line);}
-  .sec-head{display:flex; align-items:baseline; justify-content:space-between; margin-bottom:40px; flex-wrap:wrap; gap:8px;}
-  h2{
-    font-family:var(--disp); font-weight:600; font-size:clamp(24px,3vw,32px); letter-spacing:-0.01em;
-  }
-  .sec-index{font-family:var(--mono); font-size:12px; color:var(--line); }
-
-  /* Features / About */
-  .feat-list{list-style:none; display:grid; gap:16px; max-width:70ch;}
-  .feat-list li{display:flex; gap:14px; font-size:15.5px; color:var(--navy-2);}
-  .feat-list li::before{content:""; flex:0 0 8px; height:8px; margin-top:6px; background:var(--copper);}
-
-  /* Experience timeline */
-  .tl-item{display:grid; grid-template-columns:150px 1fr; gap:24px; padding:22px 0; border-top:1px solid var(--line);}
-  .tl-item:first-child{border-top:none;}
-  @media (max-width:640px){ .tl-item{grid-template-columns:1fr; gap:6px;} }
-  .tl-date{font-family:var(--mono); font-size:12px; color:var(--copper); letter-spacing:0.04em;}
-  .tl-role{font-family:var(--disp); font-weight:600; font-size:18px; margin-bottom:2px;}
-  .tl-org{font-family:var(--mono); font-size:12.5px; color:var(--navy-2); opacity:0.7; margin-bottom:12px;}
-  .tl-item ul{padding-left:18px; display:grid; gap:6px; font-size:14.5px; color:var(--navy-2);}
-
-  /* Projects */
-  .proj-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
-  @media (max-width:760px){ .proj-grid{grid-template-columns:1fr;} }
-  .proj-card{background:var(--paper); padding:28px;}
-  .proj-top{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:10px;}
-  .proj-id{font-family:var(--mono); font-size:12px; color:var(--signal);}
-  .proj-date{font-family:var(--mono); font-size:11px; color:var(--navy-2); opacity:0.6;}
-  .proj-title{font-family:var(--disp); font-weight:600; font-size:18px; margin-bottom:10px;}
-  .proj-card ul{padding-left:18px; display:grid; gap:6px; font-size:14px; color:var(--navy-2); margin-bottom:12px;}
-  .proj-link{font-family:var(--mono); font-size:12px; color:var(--copper); text-decoration:none; border-bottom:1px solid var(--copper);}
-
-  /* Education */
-  .edu-item{display:grid; grid-template-columns:150px 1fr; gap:24px; padding:20px 0; border-top:1px solid var(--line);}
-  .edu-item:first-child{border-top:none;}
-  @media (max-width:640px){ .edu-item{grid-template-columns:1fr; gap:4px;} }
-  .edu-degree{font-family:var(--disp); font-weight:600; font-size:16.5px;}
-  .edu-org{font-family:var(--mono); font-size:12.5px; color:var(--navy-2); opacity:0.75; margin-top:2px;}
-  .edu-gpa{font-family:var(--mono); font-size:12px; color:var(--copper); margin-top:6px;}
-
-  /* Skills */
-  .skill-groups{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:28px;}
-  .skill-group h3{font-family:var(--mono); font-size:11.5px; text-transform:uppercase; letter-spacing:0.1em; color:var(--copper); margin-bottom:14px;}
-  .pin-list{display:flex; flex-wrap:wrap; gap:8px;}
-  .pin{
-    font-family:var(--mono); font-size:12.5px; padding:6px 10px; border:1px solid var(--line);
-    color:var(--navy-2); background:var(--paper-2);
-  }
-
-  /* Contact / Footer */
-  footer{background:var(--navy); color:var(--paper); padding:70px 0 40px;}
-  footer h2{color:var(--paper);}
-  .contact-row{display:flex; flex-wrap:wrap; gap:14px; margin:28px 0 50px;}
-  footer .btn{color:var(--paper);}
-  .foot-bottom{
-    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
-    font-family:var(--mono); font-size:11.5px; color:rgba(236,237,231,0.45);
-    padding-top:24px; border-top:1px solid rgba(236,237,231,0.15);
-  }
+:root{--navy:#10202B;--navy-2:#16303E;--paper:#ECEDE7;--paper-2:#E1E3DB;--copper:#C97A4A;--signal:#4E9E8E;--ink:#10181C;--line:#B9C2BE;--line-dark:rgba(236,237,231,.18);--mono:'IBM Plex Mono',monospace;--sans:'IBM Plex Sans',sans-serif;--disp:'Space Grotesk',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+@media (max-width:640px){.wrap{padding:0 20px}}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.eyebrow::before{content:"";width:16px;height:1px;background:var(--copper)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(236,237,231,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1120px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-weight:600;font-size:14px;letter-spacing:.04em;text-decoration:none;color:var(--ink)}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;color:var(--navy);opacity:.75;transition:opacity .15s}
+.nav-links a:hover{opacity:1}
+@media (max-width:820px){.nav-links{display:none}}
+.hero{background:var(--navy);color:var(--paper);padding:150px 0 80px;position:relative;overflow:hidden;border-bottom:1px solid var(--copper)}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line-dark) 1px,transparent 1px),linear-gradient(90deg,var(--line-dark) 1px,transparent 1px);background-size:36px 36px;opacity:.35;pointer-events:none}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr;gap:48px}}
+.part-no{font-family:var(--mono);font-size:12px;color:var(--signal);letter-spacing:.1em;margin-bottom:14px}
+h1.name{font-family:var(--disp);font-weight:700;font-size:clamp(40px,6vw,68px);line-height:1.02;letter-spacing:-.01em;margin-bottom:14px}
+.role{font-family:var(--disp);font-weight:500;font-size:clamp(17px,2.2vw,22px);color:var(--copper);margin-bottom:22px}
+.dek{max-width:52ch;color:rgba(236,237,231,.82);font-size:15.5px;margin-bottom:30px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;padding:12px 18px;text-decoration:none;border:1px solid rgba(236,237,231,.3);color:var(--paper);transition:all .18s;display:inline-flex;align-items:center;gap:8px}
+.btn:hover{border-color:var(--copper);color:var(--copper)}
+.btn.solid{background:var(--copper);border-color:var(--copper);color:var(--navy);font-weight:600}
+.btn.solid:hover{background:var(--paper);border-color:var(--paper);color:var(--navy)}
+.puf-panel{border:1px solid rgba(236,237,231,.25);padding:18px;background:rgba(16,32,43,.4)}
+.puf-label{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(236,237,231,.5);margin-bottom:12px}
+#puf-status{color:var(--signal)}
+.puf-grid{display:grid;grid-template-columns:repeat(16,1fr);gap:3px;aspect-ratio:1/1}
+.cell{background:rgba(236,237,231,.06);transition:background .12s linear}
+.cell.on{background:var(--signal);box-shadow:0 0 6px rgba(78,158,142,.6)}
+.cell.on.locked{background:var(--copper);box-shadow:0 0 6px rgba(201,122,74,.55)}
+section{padding:80px 0;border-bottom:1px solid var(--line)}
+.sec-head{margin-bottom:40px}
+h2{font-family:var(--disp);font-weight:600;font-size:clamp(24px,3vw,32px);letter-spacing:-.01em}
+.feat-list{list-style:none;display:grid;gap:16px;max-width:70ch}
+.feat-list li{display:flex;gap:14px;font-size:15.5px;color:var(--navy-2)}
+.feat-list li::before{content:"";flex:0 0 8px;height:8px;margin-top:6px;background:var(--copper)}
+.tl-item,.edu-item,.pub-item{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line)}
+.tl-item:first-of-type,.edu-item:first-of-type,.pub-item:first-of-type{border-top:none}
+@media (max-width:640px){.tl-item,.edu-item,.pub-item{grid-template-columns:1fr;gap:6px}}
+.tl-date{font-family:var(--mono);font-size:12px;color:var(--copper);letter-spacing:.04em}
+.tl-role,.edu-degree,.pub-title{font-family:var(--disp);font-weight:600;font-size:18px;margin-bottom:2px}
+.tl-org,.edu-org,.pub-meta{font-family:var(--mono);font-size:12.5px;color:var(--navy-2);opacity:.75;margin-bottom:10px}
+.tl-item ul,.edu-item ul{padding-left:18px;display:grid;gap:6px;font-size:14.5px;color:var(--navy-2)}
+.edu-gpa{font-family:var(--mono);font-size:12px;color:var(--copper);margin-bottom:8px}
+.pub-link,.proj-link{font-family:var(--mono);font-size:12px;color:var(--copper);text-decoration:none;border-bottom:1px solid var(--copper)}
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+@media (max-width:760px){.proj-grid{grid-template-columns:1fr}}
+.proj-card{background:var(--paper);padding:28px}
+.proj-card.wide{grid-column:1/-1}
+.proj-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.proj-id{font-family:var(--mono);font-size:12px;color:var(--signal)}
+.proj-date{font-family:var(--mono);font-size:11px;color:var(--navy-2);opacity:.6}
+.proj-title{font-family:var(--disp);font-weight:600;font-size:18px;margin-bottom:10px}
+.proj-card ul{padding-left:18px;display:grid;gap:6px;font-size:14px;color:var(--navy-2)}
+.metrics{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.metric{font-family:var(--mono);font-size:12px;padding:5px 9px;border:1px solid var(--signal);color:var(--navy-2)}
+.skill-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+.skill-group h3{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--copper);margin-bottom:14px}
+.pin-list{display:flex;flex-wrap:wrap;gap:8px}
+.pin{font-family:var(--mono);font-size:12.5px;padding:6px 10px;border:1px solid var(--line);color:var(--navy-2);background:var(--paper-2)}
+footer{background:var(--navy);color:var(--paper);padding:70px 0 40px}
+footer h2{color:var(--paper)}
+.contact-row{display:flex;flex-wrap:wrap;gap:14px;margin:28px 0 50px}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:var(--mono);font-size:11.5px;color:rgba(236,237,231,.45);padding-top:24px;border-top:1px solid rgba(236,237,231,.15)}
 </style>
 </head>
 <body>
@@ -223,13 +88,14 @@
 <nav>
   <div class="nav-inner">
     <a href="#" class="logo" aria-label="Mehul Verma home">
-      <svg width="20" height="20" viewBox="0 0 20 20"><rect width="8" height="8" fill="#C97A4A"/><rect x="12" width="8" height="8" fill="#16303E"/><rect y="12" width="8" height="8" fill="#16303E"/><rect x="12" y="12" width="8" height="8" fill="#C97A4A"/></svg>
+      <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><rect width="8" height="8" fill="#C97A4A"/><rect x="12" width="8" height="8" fill="#16303E"/><rect y="12" width="8" height="8" fill="#16303E"/><rect x="12" y="12" width="8" height="8" fill="#C97A4A"/></svg>
       MV
     </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Research</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -239,19 +105,18 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="part-no">DATASHEET · REV A1 · PATIALA, IN</div>
+      <div class="part-no">DATASHEET · REV A2 · INGOLSTADT, DE</div>
       <h1 class="name">Mehul Verma</h1>
-      <div class="role">VLSI Engineer — Hardware Security &amp; Embedded Systems</div>
-      <p class="dek">I build hardware that authenticates itself. My work turns the physical noise of silicon — unstable SRAM bits at power-up — into unclonable cryptographic keys, alongside Verilog accelerators and CNN-based perception systems.</p>
-      <div class="uid">UID <span>0x4D 45 48 55 4C</span> — derived from name, ASCII-encoded, for illustration.</div>
+      <div class="role">Automotive Engineer — Embedded Systems &amp; Vehicle Security</div>
+      <p class="dek">I design the electronics inside the vehicle: hardware-accelerated encryption for CAN bus, silicon-based device authentication, and the embedded and VLSI foundations underneath. Currently studying International Automotive Engineering at THI Ingolstadt.</p>
       <div class="cta-row">
-        <a class="btn solid" href="mailto:mehul25169@gmail.com">Email me</a>
+        <a class="btn solid" href="mailto:mehul21502@gmail.com">Email me</a>
         <a class="btn" href="https://www.github.com/mv-02" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="https://in.linkedin.com/in/mehul-verma-mv02" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://www.linkedin.com/in/mehul-verma-mv02/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
-    <div class="puf-panel">
-      <div class="puf-label"><span>SRAM POWER-UP STATE</span><span id="puf-status">STABILIZING</span></div>
+    <div class="puf-panel" aria-hidden="true">
+      <div class="puf-label"><span>SRAM power-up state</span><span id="puf-status">STABILIZING</span></div>
       <div class="puf-grid" id="pufGrid"></div>
     </div>
   </div>
@@ -259,240 +124,179 @@
 
 <section id="about">
   <div class="wrap">
-    <div class="sec-head">
-      <div><div class="eyebrow">Features</div><h2>About</h2></div>
-      <div class="sec-index">01</div>
-    </div>
+    <div class="sec-head"><div class="eyebrow">About</div><h2>Automotive electronics, from silicon to bus</h2></div>
     <ul class="feat-list">
-      <li>Designed and shipped an SRAM Physical Unclonable Function (PUF) authentication system — intrinsic power-up states become device-specific keys, with no stored secrets.</li>
-      <li>Comfortable across the stack: Verilog/SystemVerilog accelerators, embedded ARM, and applied cryptography (ChaCha20, ECDH), down through CNN-based perception models.</li>
-      <li>Currently pursuing an M.Tech in VLSI Design at Thapar Institute of Engineering &amp; Technology, with published research in autonomous-vehicle perception (IEEE, GTSRB traffic sign classification).</li>
-      <li>Optimizes for the numbers that matter in hardware: power, area, and timing — not just functional correctness.</li>
+      <li>M.Eng. student in International Automotive Engineering at Technische Hochschule Ingolstadt, focused on vehicle electronics and software architectures, ADAS and automotive systems engineering.</li>
+      <li>Built a hardware ChaCha20 cipher for CAN 2.0B that encrypts safety-critical frames within a single CAN bit time budget, using under 1.5% of an FPGA's LUTs.</li>
+      <li>Completed the first year of an M.Tech in VLSI Design at Thapar Institute (CGPA 8.45), with research in hardware security and two IEEE conference papers.</li>
+      <li>Background in software engineering: a seven-month internship shipping C#, .NET and Angular features, with measurable gains in API speed and test coverage.</li>
     </ul>
-  </div>
-</section>
-
-<section id="experience">
-  <div class="wrap">
-    <div class="sec-head">
-      <div><div class="eyebrow">Experience</div><h2>Work History</h2></div>
-      <div class="sec-index">02</div>
-    </div>
-
-    <div class="tl-item">
-      <div class="tl-date">07/2023 – 02/2024</div>
-      <div>
-        <div class="tl-role">SDE Intern</div>
-        <div class="tl-org">Watchguard Technologies Ltd</div>
-        <ul>
-          <li>Engineered and shipped features for web applications using C#, Angular, and .NET.</li>
-          <li>Debugged and resolved issues across the codebase, improving overall system performance.</li>
-          <li>Ran testing and QA procedures to ensure functionality and reliability.</li>
-          <li>Collaborated cross-team to deliver required results.</li>
-        </ul>
-      </div>
-    </div>
   </div>
 </section>
 
 <section id="projects">
   <div class="wrap">
-    <div class="sec-head">
-      <div><div class="eyebrow">Modules</div><h2>Projects</h2></div>
-      <div class="sec-index">03</div>
-    </div>
-
+    <div class="sec-head"><div class="eyebrow">Projects</div><h2>Selected work</h2></div>
     <div class="proj-grid">
 
-      <div class="proj-card">
-        <div class="proj-top"><span class="proj-id">M01</span><span class="proj-date">08/2025 – 12/2025</span></div>
+      <div class="proj-card wide">
+        <div class="proj-top"><span class="proj-id">CAN bus security</span><span class="proj-date">02/2026 – 04/2026</span></div>
+        <div class="proj-title">CAN Bus Encryption Using ChaCha20</div>
+        <ul>
+          <li>Designed a hardware-accelerated ChaCha20 stream cipher in Verilog (parallel ARX quarter-round core with FSM) as a “cryptographic firewall” between the host MCU and CAN transceiver, verified in Xilinx Vivado with a CAN 2.0B testbench.</li>
+          <li>Generated a 512-bit keystream block in 235 ns at 100 MHz, about 8.5x faster than a single CAN bit time (2,000 ns at 500 kbps). One block covers up to eight 8-byte CAN frames.</li>
+          <li>Added MAC authentication and a 32-bit rolling-counter nonce so forged and replayed frames fail verification in simulation.</li>
+          <li>Defined a 4-level (A–D) safety classification that encrypts only safety-critical signals, keeping bus load under the 70% threshold.</li>
+        </ul>
+        <div class="metrics"><span class="metric">235 ns / 512-bit block</span><span class="metric">1,757 LUTs (1.31%)</span><span class="metric">1,421 flip-flops (0.53%)</span><span class="metric">No S-boxes</span></div>
+      </div>
+
+      <div class="proj-card wide">
+        <div class="proj-top"><span class="proj-id">Hardware root of trust</span><span class="proj-date">08/2025 – 12/2025</span></div>
         <div class="proj-title">SRAM PUF File Authentication System</div>
         <ul>
-          <li>Designed and implemented an SRAM Physical Unclonable Function using Arduino to generate hardware-unique keys.</li>
-          <li>Used intrinsic SRAM power-up states to create device-specific fingerprints for authentication.</li>
-          <li>Integrated the PUF response as a password mechanism for zip file encryption — eliminating stored or remembered keys.</li>
+          <li>Built a hardware root of trust on an Arduino Uno (ATmega328P) that derives a 256-bit key from SRAM power-up state, with nothing stored in non-volatile memory. It authenticates sudo through Linux PAM (pam_exec, Python, UART).</li>
+          <li>Developed a 4-step calibration (20 power cycles, stability filtering, spatial distribution, 128/128 bit balancing), reaching 0.9158 bits Shannon entropy.</li>
+          <li>Implemented a Reed-Solomon fuzzy extractor (24 parity symbols, corrects up to 12 bytes) against a measured 5.48% bit-error rate.</li>
+          <li>Achieved 46.06% inter-device vs 5.48% intra-device Hamming distance, giving zero false accepts across 10 tested boards.</li>
         </ul>
+        <div class="metrics"><span class="metric">256-bit key</span><span class="metric">46.06% inter-device HD</span><span class="metric">5.48% intra-device HD</span><span class="metric">0 false accepts / 10 boards</span></div>
       </div>
 
-      <div class="proj-card">
-        <div class="proj-top"><span class="proj-id">M02</span><span class="proj-date">02/2026 – 04/2026</span></div>
-        <div class="proj-title">Verilog Image Accelerator</div>
-        <ul>
-          <li>Designed a Verilog-based approximate image accelerator.</li>
-          <li>Implemented a custom MAC unit for Canny edge detection.</li>
-          <li>Reduced power draw by ~15% and area by ~20%.</li>
-        </ul>
-      </div>
-
-      <div class="proj-card">
-        <div class="proj-top"><span class="proj-id">M03</span><span class="proj-date">02/2026 – 04/2026</span></div>
-        <div class="proj-title">CAN Bus Encryption using ChaCha20</div>
-        <ul>
-          <li>Designed a Verilog implementation of the ChaCha20 encryption algorithm.</li>
-          <li>Verified cipher/plaintext round-trip in Vivado.</li>
-          <li>Simulated CAN bus traffic across mock controllers with message authentication codes.</li>
-        </ul>
-      </div>
-
-      <div class="proj-card">
-        <div class="proj-top"><span class="proj-id">M04</span><span class="proj-date">07/2023 – 07/2024</span></div>
-        <div class="proj-title">CNN-Based Traffic Sign Recognition</div>
-        <ul>
-          <li>Authored published research on real-time traffic sign classification for autonomous-vehicle safety.</li>
-          <li>Built a deep learning model in Python/TensorFlow, served via API to a web interface.</li>
-          <li>Achieved strong classification accuracy on GTSRB through hyperparameter tuning and pipeline optimization.</li>
-        </ul>
-        <a class="proj-link" href="https://ieeexplore.ieee.org/document/10574954" target="_blank" rel="noopener">View on IEEE Xplore →</a>
-      </div>
-
-      <div class="proj-card">
-        <div class="proj-top"><span class="proj-id">M05</span><span class="proj-date">07/2023 – 02/2024</span></div>
+      <div class="proj-card wide">
+        <div class="proj-top"><span class="proj-id">Full-stack</span><span class="proj-date">07/2023 – 02/2024</span></div>
         <div class="proj-title">Weather Forecasting Application</div>
         <ul>
-          <li>Built a weather app using the OpenWeatherMap API.</li>
-          <li>Displayed real-time and forecast data for user-specified locations.</li>
-          <li>First deep dive into API integration, UI design, and data parsing.</li>
+          <li>Built a full-stack weather app with an Angular frontend and a .NET REST API that fetches real-time and forecast data from OpenWeatherMap, keeping the API key server-side.</li>
+          <li>Added server-side caching with a 5-minute expiry: repeat requests are served in 5 ms instead of 250 ms, and external API calls dropped by 85%.</li>
+          <li>Wrote xUnit and Moq tests for cache hit, miss and expiry, reaching 92% coverage on the service layer.</li>
         </ul>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Research</div><h2>Publications</h2></div>
+    <div class="pub-item">
+      <div class="tl-date">2026</div>
+      <div>
+        <div class="pub-title">Integrated SRAM PUF and PAM Based Secure System Authentication</div>
+        <div class="pub-meta">Mehul Verma, Mahadeep Kour, Gaganpreet Kaur · 2026 IEEE Chandigarh Subsection International Conference (CHANDICON 2026)</div>
+      </div>
+    </div>
+    <div class="pub-item">
+      <div class="tl-date">2024</div>
+      <div>
+        <div class="pub-title">Enhancing Road Safety: Convolutional Neural Networks in Traffic Sign Recognition</div>
+        <div class="pub-meta">Gauravpreet Singh, Abhishek Kumar, Parveen Bajaj, Tanisha, Mehul Verma · 2024 3rd International Conference on Applied Artificial Intelligence and Computing (ICAAIC)</div>
+        <a class="pub-link" href="https://ieeexplore.ieee.org/document/10574954" target="_blank" rel="noopener">View on IEEE Xplore</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Experience</div><h2>Work history</h2></div>
+    <div class="tl-item">
+      <div class="tl-date">07/2023 – 02/2024</div>
+      <div>
+        <div class="tl-role">Software Developer Intern</div>
+        <div class="tl-org">Watchguard Technologies · Noida, India</div>
+        <ul>
+          <li>Delivered new features for a web application using C#, .NET and Angular, including dashboards.</li>
+          <li>Cut API response time by nearly 40% by configuring an NGINX reverse proxy with response caching, reducing repeat load on the backend and database.</li>
+          <li>Raised test coverage from 70% to 95% by writing integration tests for modules.</li>
+          <li>Debugged and resolved issues in the existing codebase, improving system stability.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="education">
   <div class="wrap">
-    <div class="sec-head">
-      <div><div class="eyebrow">Education</div><h2>Academic Record</h2></div>
-      <div class="sec-index">04</div>
+    <div class="sec-head"><div class="eyebrow">Education</div><h2>Academic record</h2></div>
+
+    <div class="edu-item">
+      <div class="tl-date">10/2026 – present</div>
+      <div>
+        <div class="edu-degree">M.Eng., International Automotive Engineering</div>
+        <div class="edu-org">Technische Hochschule Ingolstadt · Germany</div>
+        <ul>
+          <li>Vehicle electronics and software architectures: automotive ECUs, embedded systems, AUTOSAR-based development.</li>
+          <li>Control systems and signal processing: sensor technology, Kalman filters, signal analysis.</li>
+          <li>Advanced automotive systems: ADAS and integrated safety, electric drivetrains, vehicle dynamics.</li>
+          <li>Systems engineering and testing: automotive systems engineering processes, simulation methods for vehicle safety, interdisciplinary team projects.</li>
+        </ul>
+      </div>
     </div>
 
     <div class="edu-item">
-      <div class="tl-date">2025 – Expected 2027</div>
+      <div class="tl-date">07/2025 – 08/2026</div>
       <div>
-        <div class="edu-degree">M.Tech, VLSI Design</div>
-        <div class="edu-org">Thapar Institute of Engineering &amp; Technology</div>
-        <div class="edu-gpa">CGPA 8.56</div>
+        <div class="edu-degree">M.Tech, VLSI Design (first year completed)</div>
+        <div class="edu-org">Thapar Institute of Engineering and Technology · Patiala, India</div>
+        <div class="edu-gpa">Grade 8.45</div>
+        <ul>
+          <li>Digital and analog IC design, low power system design, FPGA-based system design, physical design automation.</li>
+          <li>VLSI testing and verification, VLSI signal processing, embedded systems, hardware security.</li>
+        </ul>
       </div>
     </div>
+
     <div class="edu-item">
       <div class="tl-date">2020 – 2024</div>
       <div>
         <div class="edu-degree">B.E., Computer Science &amp; Engineering</div>
-        <div class="edu-org">Chandigarh University</div>
+        <div class="edu-org">Chandigarh University · Mohali, India</div>
         <div class="edu-gpa">CGPA 8.08</div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="skills" style="border-bottom:none;">
+<section id="skills" style="border-bottom:none">
   <div class="wrap">
-    <div class="sec-head">
-      <div><div class="eyebrow">Pin Configuration</div><h2>Skills</h2></div>
-      <div class="sec-index">05</div>
-    </div>
-
+    <div class="sec-head"><div class="eyebrow">Skills</div><h2>Toolbox</h2></div>
     <div class="skill-groups">
-      <div class="skill-group">
-        <h3>Hardware &amp; HDL</h3>
-        <div class="pin-list">
-          <span class="pin">SystemVerilog</span>
-          <span class="pin">Verilog</span>
-          <span class="pin">Embedded ARM</span>
-          <span class="pin">System Architecture</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>Software</h3>
-        <div class="pin-list">
-          <span class="pin">C++</span>
-          <span class="pin">Python</span>
-          <span class="pin">Unix Shell</span>
-          <span class="pin">SQL</span>
-          <span class="pin">MongoDB</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>ML / AI</h3>
-        <div class="pin-list">
-          <span class="pin">Deep Learning</span>
-          <span class="pin">Machine Learning</span>
-          <span class="pin">TensorFlow</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>Systems</h3>
-        <div class="pin-list">
-          <span class="pin">IoT Applications</span>
-        </div>
-      </div>
+      <div class="skill-group"><h3>Languages</h3><div class="pin-list"><span class="pin">C</span><span class="pin">C++</span><span class="pin">C#</span><span class="pin">Python</span><span class="pin">MATLAB</span><span class="pin">Verilog HDL</span><span class="pin">Assembly</span></div></div>
+      <div class="skill-group"><h3>Hardware &amp; VLSI</h3><div class="pin-list"><span class="pin">Xilinx Vivado</span><span class="pin">FPGA design</span><span class="pin">RTL simulation &amp; verification</span><span class="pin">CMOS design</span><span class="pin">Arduino / ATmega328P</span></div></div>
+      <div class="skill-group"><h3>Automotive &amp; security</h3><div class="pin-list"><span class="pin">CAN 2.0B</span><span class="pin">ChaCha20</span><span class="pin">SRAM PUF</span><span class="pin">Reed-Solomon fuzzy extractors</span><span class="pin">Linux PAM</span></div></div>
+      <div class="skill-group"><h3>Web &amp; backend</h3><div class="pin-list"><span class="pin">ASP.NET Core</span><span class="pin">Angular</span><span class="pin">REST APIs</span><span class="pin">NGINX</span><span class="pin">PHP</span><span class="pin">MySQL</span><span class="pin">MongoDB</span></div></div>
+      <div class="skill-group"><h3>Tools</h3><div class="pin-list"><span class="pin">Git</span><span class="pin">Docker</span><span class="pin">Linux</span><span class="pin">xUnit</span></div></div>
+      <div class="skill-group"><h3>Languages spoken</h3><div class="pin-list"><span class="pin">Hindi (native)</span><span class="pin">English (C1)</span><span class="pin">German (A1)</span></div></div>
     </div>
   </div>
 </section>
 
 <footer id="contact">
   <div class="wrap">
-    <div class="eyebrow" style="color:var(--signal);">Contact</div>
-    <h2>Let's talk hardware.</h2>
-    <p style="max-width:50ch; color:rgba(236,237,231,0.75); margin-top:14px;">Open to research collaborations, internships, and graduate opportunities in VLSI and hardware security.</p>
+    <div class="eyebrow" style="color:var(--signal)">Contact</div>
+    <h2>Let's talk automotive.</h2>
+    <p style="max-width:54ch;color:rgba(236,237,231,.75);margin-top:14px">Based in Ingolstadt. Open to internships, working student roles and project work in automotive embedded systems, ADAS and in-vehicle security.</p>
     <div class="contact-row">
-      <a class="btn solid" href="mailto:mehul25169@gmail.com">mehul25169@gmail.com</a>
+      <a class="btn solid" href="mailto:mehul21502@gmail.com">mehul21502@gmail.com</a>
       <a class="btn" href="https://www.github.com/mv-02" target="_blank" rel="noopener">github.com/mv-02</a>
-      <a class="btn" href="https://in.linkedin.com/in/mehul-verma-mv02" target="_blank" rel="noopener">linkedin.com/in/mehul-verma-mv02</a>
+      <a class="btn" href="https://www.linkedin.com/in/mehul-verma-mv02/" target="_blank" rel="noopener">linkedin.com/in/mehul-verma-mv02</a>
     </div>
-    <div class="foot-bottom">
-      <span>© 2026 MEHUL VERMA</span>
-      <span>BUILT LIKE A DATASHEET, NOT A TEMPLATE</span>
-    </div>
+    <div class="foot-bottom"><span>© 2026 Mehul Verma</span><span>Ingolstadt, Germany</span></div>
   </div>
 </footer>
 
 <script>
 (function(){
-  var grid = document.getElementById('pufGrid');
-  var status = document.getElementById('puf-status');
-  var N = 256; // 16x16
-  var cells = [];
-  for (var i=0;i<N;i++){
-    var d = document.createElement('div');
-    d.className = 'cell';
-    grid.appendChild(d);
-    cells.push(d);
-  }
-
-  // deterministic pseudo-random pattern (seeded) so the "fingerprint" is stable
-  function seededRandom(seed){
-    var x = Math.sin(seed) * 10000;
-    return x - Math.floor(x);
-  }
-  var finalPattern = cells.map(function(_,i){ return seededRandom(i * 12.9898 + 4) > 0.62; });
-
-  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  function lockFinal(){
-    cells.forEach(function(cell,i){
-      cell.classList.remove('on');
-      if (finalPattern[i]) { cell.classList.add('on'); cell.classList.add('locked'); }
-    });
-    status.textContent = 'STABLE';
-  }
-
-  if (reduceMotion){
-    lockFinal();
-  } else {
-    var flickerTimer = setInterval(function(){
-      cells.forEach(function(cell){
-        cell.classList.toggle('on', Math.random() > 0.55);
-      });
-    }, 90);
-
-    setTimeout(function(){
-      clearInterval(flickerTimer);
-      lockFinal();
-    }, 1400);
-  }
+  var grid=document.getElementById('pufGrid'),status=document.getElementById('puf-status'),cells=[];
+  for(var i=0;i<256;i++){var d=document.createElement('div');d.className='cell';grid.appendChild(d);cells.push(d);}
+  function sr(s){var x=Math.sin(s)*10000;return x-Math.floor(x);}
+  var fin=cells.map(function(_,i){return sr(i*12.9898+4)>.62;});
+  function lock(){cells.forEach(function(c,i){c.classList.remove('on');if(fin[i]){c.classList.add('on','locked');}});status.textContent='STABLE';}
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){lock();}
+  else{var t=setInterval(function(){cells.forEach(function(c){c.classList.toggle('on',Math.random()>.55);});},90);setTimeout(function(){clearInterval(t);lock();},1400);}
 })();
 </script>
-
 </body>
 </html>
